@@ -1,0 +1,21 @@
+@import"nullstyle";
+
+
+.grid{
+  display: grid;
+
+  font-size: 30px;
+  padding: 20px;
+  background-color: rgb(255, 116, 116);
+  margin: 0px 0px 20px 0px;
+  color: white;
+}
+
+.grid-inline{
+  display: inline-grid;
+
+  font-size: 30px;
+  padding: 20px;
+  background-color: rgb(159, 91, 255);
+  color: white;
+}

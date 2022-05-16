@@ -1,0 +1,14 @@
+.myBtn {
+   width: auto;
+   padding: 5px 15px;
+   margin: 5px 0 5px 80%;
+   color: rgb(0, 0, 0);
+   font-size: 14px;
+   background: transparent;
+   box-shadow: 3px 3px 4px #00000042;
+   overflow: hidden;
+   border-radius: 50px;
+   cursor: pointer;
+   word-spacing: 1px;
+   letter-spacing: 3px;
+}

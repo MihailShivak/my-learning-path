@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*-----------------------------------------------------
+@keyframes - ключевые кадры. Запись:
+@keyframes white-circle{
+  /*from{
+
+  }
+  to{
+
+  }*/
+/*0%{
+    left: 0;
+  }
+  100%{
+    left: 500px;
+  }
+}, где from/0% - начало, а to/100% - конечный результат
+animation-name: <имя ключевых кадров>, <имя ключевых кадров 2>; - приоритет у последней записи, имя анимации чувствительна к регистру и не допускается использование ключевого слова none, его можно использовать для отключения анимации 
+animation-duration: <время>, <время 2>; - отвечает за продолжительность анимации, время за которое проигрываются ключевые кадры 
+animation-timing-function: <name>,<name 2>; - задаёт сценарий развити анимации между ключевыми кадрами, значение по умолчанию ease, так же можно указывать другие значения через запятую
+animation-iteration-count: <значение>,<значение 2>; - отвечает за кол-во повторов ключевых кадров, значение по умолчанию 1, кроме числового значения есть значение infinite, что заставляет проигрываться анимацию бесконечно
+animation-direction: <значение>,<значение 2>; - определяет тип и направление проигрывание ключ кадров. Значение alternate - каждый четный проход по ключ кадрам будет проигрываться в обратную сторону(ping-pong). Значение alternate-reverse - каждый нечетный. Значение reverse - обратная анимация.
+animation-play-state: ; - позволяет запускать/приостанавливать анимацию по определённому событию. Значения: 1)running - анимация продолжается, значение по умолчанию 2)paused - приостанавливает анимацию, используется с hover 3)none - сбрасвает анимацию
+animation-delay: <время>,<время 2>; - задержка анимации перед началом
+animation-fill-mode: <значение>,<значение2>; - определяет какие значения анимируемых свойств применятся после завершения анимации. Значение по умолчанию none. Значение forwards - 
+-----------------------------------------------------*/
+.content {
+  padding: 50px;
+}
+
+.content__circle {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  -webkit-animation-name: white-circle;
+          animation-name: white-circle;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.content__circle:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes white-circle {
+  /*from{
+
+  }
+  to{
+
+  }*/
+  0% {
+    left: 0;
+  }
+  50% {
+    border-radius: 0%;
+  }
+  100% {
+    left: 500px;
+  }
+}
+
+@keyframes white-circle {
+  /*from{
+
+  }
+  to{
+
+  }*/
+  0% {
+    left: 0;
+  }
+  50% {
+    border-radius: 0%;
+  }
+  100% {
+    left: 500px;
+  }
+}

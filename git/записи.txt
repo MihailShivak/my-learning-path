@@ -1,0 +1,23 @@
+После установки git:
+git config --global user.name "Mihail Shivak"
+git config --global user.email shivakmisha@gmail.com
+Создание репозитория:
+git init
+Работа с ветками:
+git branch имя ветки - создание новой ветки
+git checkout имя ветки - переход на другую ветку
+git status - посмотреть все файлы 
+git commit -m "" - создание коммита
+git branch -a - список веток
+git merge имя ветки - для слияния веток 
+git branch -d имя ветки - удаление ветки 
+git checkout -b dev - создание и переход на ветку одной коммандой 
+git reset --hard хэш сумма коммита - откат
+git remote add origin ссылка с гитхаба - добавляем наш репозиторий на github
+git remote -v - посмотреть репозитории 
+git push origin имя ветки - отправить изменения в репозиторий github
+git clone ссылка с github - взять репозиторий с github
+git pull origin имя ветки - получить изменение с сервера 
+git fetch origin имя ветки - получить локальные изменения репозитория
+git push --set-upstream origin имя ветки - связь с удалённой веткой
+git add . - добавить все файлы

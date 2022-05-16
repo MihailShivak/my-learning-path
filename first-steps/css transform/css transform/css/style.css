@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*--------------------
+2D - трансформация
+transform: ; - применяется только к блочным объектам, чтобы использовать transform: ; для не блочных элементов надо сделать запись:
+.element name{
+  display: e.name-block/block;
+  transform: ;
+}, то же самое с псевдоэлементами:
+.block::before{
+  display: e.name-block/block;
+  content: "";
+  transform: ;
+}
+transform: translate(x,y); - сдвигает элемент на новое место, перемещая относительно изначального положения объекта вправо и вниз, используя координаты X and Y. 
+transform: scale(w,h); - масштабирует элементы, делая их больше или меньше. По умолчанию значения указаны как (1) - реальный размер объекта. Первое значение масштабирует по ширине, второе по высоте. По умолчнию значения (1,1)
+transform: rotate(0deg); - поворачивает элементы на заданное кол-во градусов, отрицательные значения поворачивают элемент против часовой стрелки, положительные - по часовой. Значения записываются как градус поворота и deg
+transform: skew(0deg,0deg); - девормирует (искажает) стороны объекта относительно координатных осей. Если указано одно значение, второе будет определено браузером автоматически. Записываются значения как градус поворота и deg
+transform: matrix(a,c,b,d,x,y); - объединяет несколько функий 2D-трансформаций в одной. В качестве трансформации допустимы поворот, мастштабирование, наклон(деформация) и изменение положения. Свойства указываются без единиц измерения.
+transform-origin: ; - позволяет сместить центр трансформации, относительно которого происходит изменение положения/размера/формы элемента. Запись: 
+.content__transform-origin{
+  transform-origin: center;
+  transform: ;
+}, значения можно указывать как словами, так и в цивровых значениях:
+.content__transform-origin{
+  transform-origin: top left;
+  transform: ;
+}
+3D - трансформация
+.block {
+  perspective-origin: center;
+  perspective: 0px;
+} - установка глубины и смена точки начала координат
+transform: translate3D; - по аналогии с 2D это значение задает перемещение элемента, но в 3D-пространстве. Помимо оси X and Y добавляется ось Z
+transform: scale3D(x,y,z); - задает трехмерное масштабирование по одной из осей XYZ
+transform: rotate3D(X,Y,Z,deg); - вращает элемент относительно трех осей
+transform-style: ; - стиль трансформациии. По умолчанию значение flat;, но есть и для 3D - preserve-3d;
+--------------------*/

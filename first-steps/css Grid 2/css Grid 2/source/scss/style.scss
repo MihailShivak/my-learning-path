@@ -1,0 +1,85 @@
+@import"nullstyle";
+/*--------------------
+  grid-template-columns: ; - для управления колонками
+  grid-template-rows: ; - для управления рядами
+  grid-template-areas: ; -  имена областей. Запись:
+  grid-template-areas: 
+  "header header"
+  "side content";, после этой комманды стоит присвоить имена нашим элементам. Запись:
+  .grid-header{
+  grid-area: header;
+}
+.grid-side{
+  grid-area: side;
+}
+.grid-content{
+  grid-area: content;
+}
+grid-auto-flow: ; - автоматическое размещение. Свойства: row - поочерёдно в ряд, column - заполнение в колонку, dense - грид-элементы будут стараться заполнить пространство даже изменяя порядок для умещения в контейнере
+--------------------*/
+body{
+  background-color: rgb(22, 22, 22);
+}
+
+h1{
+  /*margin: 10px 0 0 10px;*/
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.529);
+}
+
+.grid{
+  color: white;
+  margin: 20px 0;
+  padding: 0 2px;
+}
+
+.grid__body{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid__item{
+  padding: 8px 5px;
+  border: 1px dashed rgb(95, 95, 95);
+}
+
+h2{
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.529);
+}
+
+.grid-wrapper{
+  display: grid;
+  margin: 20px 0;
+  grid-template-areas: 
+    "header header"
+    "side content";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr;
+}
+
+.grid-header,
+.grid-side,
+.grid-content{
+  text-align: center;
+  padding: 30px;
+  border: 1px dashed rgb(95, 95, 95);
+  margin: 0 0 15px 0;
+  color: white;
+}
+
+.grid-header{
+  grid-area: header;
+}
+.grid-side{
+  grid-area: side;
+}
+.grid-content{
+  grid-area: content;
+}
+

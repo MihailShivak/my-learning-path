@@ -1,0 +1,15 @@
+.deleteBtn {
+   width: 20%;
+   padding: 5px 5px;
+   margin: 15px 0 10% 80%;
+   color: rgb(0, 0, 0);
+   font-size: 14px;
+   background: transparent;
+   box-shadow: 5px 5px 21px #d3d3d6,
+   -5px -5px 21px #fff;
+   overflow: hidden;
+   border-radius: 50px;
+   cursor: pointer;
+   word-spacing: 1px;
+   letter-spacing: 2px;
+}

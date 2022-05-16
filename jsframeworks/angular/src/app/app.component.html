@@ -1,0 +1,21 @@
+<div>
+  <h1 style="text-align: center;">Hello Angular</h1>
+
+
+  <hr>
+    <button style="align-items: center;" (click)="toggleCards()">Toggle Cards</button>
+  <hr>
+
+
+  <div *ngIf="toggle">
+    <app-card 
+      style="text-align: center;"
+      *ngFor="let iterCard of cards; let idx = index"
+      [card]="iterCard"
+      [index]="idx + 1"
+    ></app-card>
+  </div>
+
+
+  
+</div>

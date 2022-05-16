@@ -1,0 +1,14 @@
+.myInput{
+   width: 50%;
+   align-items: center;
+   border-radius: 50px;
+   overflow: hidden;
+   margin: 1% 25%;
+   text-align: center;
+   box-shadow: 5px 5px 21px #d3d3d6,
+   -5px -5px 21px #fff;
+   word-spacing: 1px;
+   letter-spacing: 2px;
+   font-size: 14px;
+   padding: 10px 0;
+}

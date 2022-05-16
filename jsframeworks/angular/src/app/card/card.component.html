@@ -1,0 +1,19 @@
+<h1>Card</h1>
+
+<div class="card">
+   <h2 [ngStyle]="{
+      color: card.title.length < 8 ? 'black' : 'red',
+      fontWeight: card.title.length < 12 ? 'normal' : 'bold'
+   }">{{card.title}}</h2>
+   <p style="font-size: 12px;">{{card.text}}</p>
+   <div class="buttons">
+      <button (click)="change()">change title</button>
+   </div>
+   <!-- <div class="input">
+      <input type="text" (input)="onInput($event)" [value]="title">
+      <input type="text" #myInput (input)="onInput(myInput.value)" [value]="title">
+   </div> -->
+   <div>
+      <input type="text" [(ngModel)] = 'card.title' (ngModelChange)="changeHandler()">
+   </div>
+</div>

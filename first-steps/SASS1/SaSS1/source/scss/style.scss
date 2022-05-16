@@ -1,0 +1,32 @@
+@import"nullstyle.scss";
+
+/*$fz:100px; - назнчение*/
+/*%tplborder{
+      border-bottom: 5px solid black;
+   { - шаблон
+      для вызова @extend %tplborder;*/
+
+/*@mixin name($f) {
+   font-size: $f;
+} - тот же самый шаблон
+для вызова @include name(100px)*/
+
+ .block{
+    width: 300px / 960px * 100%;
+    padding: 30px;
+    font-size: fz;
+    line-height: 20px;
+    .block_text{
+       font-size: 24px;
+       span{
+          color: red;
+       }
+   } 
+}
+.link{
+   color: rgb(79, 116, 228);
+   text-decoration: underline;
+   &:hover{
+      color: rgb(60, 97, 206);
+   }
+}

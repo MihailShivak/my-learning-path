@@ -1,0 +1,81 @@
+@import"nullstyle";
+/*--------------------
+Особенности GRID:
+1. Даже если элемент сетки реализуем с помощью строчного объекта: <span></span>, как только он становится элементом сетки: display: grid;, эти строчные объекты становятся блочными:
+HTML: 
+<div class="grid__body">
+  <div class="grid__item">1</div>
+  <span class="grid__item">2</span>
+  <div class="grid__item">3</div>
+  <div class="grid__item">4</div>
+  <span class="grid__item">5</span>
+  <div class="grid__item">6</div>
+</div>
+CSS:
+.grid__body{
+  display: grid;
+  grid-template: repeat(2,1fr) / repeat(3,1fr);
+}
+2. Если указать margin: ; для элемента сетки, то схлопывания не будет:
+.grid__item{
+  margin: 30px;
+  text-align: center;
+  padding: 8px 5px;
+  border: 1px dashed #5f5f5f;
+}
+3. margin: auto; - позволяет выравнивать элементы сетки
+Перемещение элементов сетки.
+  grid-row-start: auto;
+  grid-row-end: auto;
+  grid-column-start: auto;
+  grid-column-end: auto;, так же можно поставить значение цифрой. Так же существует короткая запись:
+  grid-row-start: span 2;
+   grid-column-start: span 3;
+Порядок вывода задаётся командой order: №;
+--------------------*/
+
+body{
+  background-color: rgb(29, 29, 29);
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.529);
+}
+
+.grid{
+  font-size: 30px;
+  color: white;
+  margin: 50px 10px;
+  padding: 0 2px;
+}
+
+.grid__body{
+  display: grid;
+  grid-template: repeat(2,1fr) / repeat(3, 1fr);
+
+}
+
+.grid__item{
+  text-align: center;
+  padding: 8px;
+  border: 1px dashed #5f5f5f;
+}
+
+.grid__item_1 {
+
+  border: 1px dashed #5f5f5f;
+  background-color: rgb(255, 208, 0);
+}
+.grid__item_2 {
+}
+.grid__item_3 {
+}
+.grid__item_4 {
+}
+.grid__item_5 {
+}
+.grid__item_6 {
+}

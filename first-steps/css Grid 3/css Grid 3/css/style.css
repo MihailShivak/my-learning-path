@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*--------------------
+Особенности GRID:
+1. Даже если элемент сетки реализуем с помощью строчного объекта: <span></span>, как только он становится элементом сетки: display: grid;, эти строчные объекты становятся блочными:
+HTML: 
+<div class="grid__body">
+  <div class="grid__item">1</div>
+  <span class="grid__item">2</span>
+  <div class="grid__item">3</div>
+  <div class="grid__item">4</div>
+  <span class="grid__item">5</span>
+  <div class="grid__item">6</div>
+</div>
+CSS:
+.grid__body{
+  display: grid;
+  grid-template: repeat(2,1fr) / repeat(3,1fr);
+}
+2. Если указать margin: ; для элемента сетки, то схлопывания не будет:
+.grid__item{
+  margin: 30px;
+  text-align: center;
+  padding: 8px 5px;
+  border: 1px dashed #5f5f5f;
+}
+3. margin: auto; - позволяет выравнивать элементы сетки
+Перемещение элементов сетки.
+  grid-row-start: auto;
+  grid-row-end: auto;
+  grid-column-start: auto;
+  grid-column-end: auto;, так же можно поставить значение цифрой. Так же существует короткая запись:
+  grid-row-start: span 2;
+   grid-column-start: span 3;
+Порядок вывода задаётся командой order: №;
+--------------------*/
+body {
+  background-color: #1d1d1d;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.529);
+}
+
+.grid {
+  font-size: 30px;
+  color: white;
+  margin: 50px 10px;
+  padding: 0 2px;
+}
+
+.grid__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[2];
+  -ms-grid-columns: (1fr)[3];
+      grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+}
+
+.grid__item {
+  text-align: center;
+  padding: 8px;
+  border: 1px dashed #5f5f5f;
+}
+
+.grid__item_1 {
+  border: 1px dashed #5f5f5f;
+  background-color: #ffd000;
+}
+/*# sourceMappingURL=style.css.map */

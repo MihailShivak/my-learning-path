@@ -1,0 +1,97 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+#root{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.App{
+   width: 98.5%;
+   background-color: rgb(247, 247, 247);
+   overflow: hidden;
+   border-radius: 25px;
+   box-shadow: 5px 5px 8px #c2c4c5a4,
+   -5px -5px 8px #c2c4c5a4;
+   margin: 50px 0 0 0;
+   padding: 30px 0;
+}
+
+.post{
+   padding: 30px 30px 30px 30px;
+   border-radius: 50px;
+   margin: 25px 10px 20px 10px;
+   text-align: start;
+   background-color: rgb(253, 253, 253);
+   box-shadow: 5px 5px 21px #d3d3d6,
+   -5px -5px 21px #fff;
+   word-spacing: 1px;
+   letter-spacing: 2px;
+   overflow: hidden;
+   text-shadow: 1px 1px rgba(0, 0, 0, 0.274);
+   color: rgb(71, 71, 71);
+}
+
+.post-enter{
+   transform: translateX(-350px);
+}
+.post-enter-active{
+   transform: translateX(0px);
+   transition: all 500ms ease-in;
+}
+.post-exit{
+   opacity: 1;
+}
+.post-exit-active{
+   transform: translateX(-350px);
+   transition: all 500ms ease-in;
+}
+
+.page__wrapper{
+   margin: 30px 0 0 30px;
+   display: flex;
+}
+
+.page{
+   padding: 10px;
+   overflow: hidden;
+   border-radius: 25px;
+   box-shadow: 5px 5px 8px #c2c4c5a4,
+   -5px -5px 8px #c2c4c5a4;
+   margin: 0 10px 0 0;
+}
+
+.page__current{
+   overflow: hidden;
+   border-radius: 25px;
+   box-shadow: 5px 5px 8px #ffffffa4,
+   -5px -5px 8px #cececea4;
+   background-color: rgba(0, 0, 0, 0.884);
+   border: 0.2px solid rgb(255, 255, 255);
+   color: white;
+}
+
+.navbar{
+   height: 50px;
+   width: 100%;
+   text-align: center;
+   background: rgba(216, 216, 216, 0.253);
+   border-radius: 5px 5px 25px 25px;
+   overflow: hidden;
+   box-shadow: 2px 8px 5px rgba(0, 0, 0, 0.322);
+   margin: 0px 0 15px 0;
+}
+
+.navbar__links{
+   margin: -4% 0 0 0;
+}
+
+.navbar__links a{
+   color: black;
+   letter-spacing: 3px;
+   font-size: 18px;
+}

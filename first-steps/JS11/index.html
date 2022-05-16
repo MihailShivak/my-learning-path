@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>
+      <span class="yellow">JavaScript.</span>
+      Браузерное окружение.
+      Работа с <span class="yellow">DOM.</span>
+   </h1>
+   <h2>Урок</h2>
+   <div class="lesson">
+      <div class="lesson__text">
+         <!--Комментарий-->
+         Текст
+      </div>
+      <ul name="list" class="lesson__list">
+         <li class="lesson__item list lesson__item_red">Point #1</li>
+         <li id="listItem" class="lesson__item-list">Point #2</li>
+         <li class="lesson__item-list">Point #3
+            <ul class="lesson__sub-list">
+               <li class="lesson__item-sub-list">sub-point #1</li>
+               <li data-item="85" class="lesson__item-sub-list">sub-point #2</li>
+               <li class="lesson__item-sub-list">sub-point #3</li>
+            </ul>
+         </li>
+         <li class="lesson__item list lesson__item list_blue">Point #4</li>
+      </ul>
+   </div>
+   <script src="../JS11/js/script.js"></script>
+</body>
+</html>
